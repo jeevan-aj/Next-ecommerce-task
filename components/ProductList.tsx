@@ -91,12 +91,15 @@ export default function ProductList() {
           className="w-full px-4 py-2 border border-black rounded mb-4"
         />
         
+        <div className="flex flex-col max-w-max gap-3 md:justify-between md:flex-row md:items-center">
         <button onClick={() => handleSort("name")} className="mr-2 px-4 py-2 bg-black text-white rounded">
           Sort by Name {sortBy === "name" && (sortOrder === "asc" ? "↑" : "↓")}
         </button>
         <button onClick={() => handleSort("price")} className="px-4 py-2 bg-black text-white rounded">
           Sort by Price {sortBy === "price" && (sortOrder === "asc" ? "↑" : "↓")}
         </button>
+        </div>
+        
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mx-auto px-5 md:px-10 lg:px-40">
